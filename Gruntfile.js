@@ -3,15 +3,15 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     clean: {
       build: [
-        '<%=pkg.config.build.dest%>'
+        'dist'
       ]
     },
     copy: {
       build : {
         expand: true,
-        cwd: '<%=pkg.config.build.src%>',
+        cwd: 'src',
         src: '**',
-        dest: '<%=pkg.config.build.dest%>',
+        dest: 'dist',
         filter: 'isFile'
       }
     },
@@ -23,9 +23,9 @@ module.exports = function(grunt) {
       },
       build: {
         expand: true,
-        cwd: '<%=pkg.config.build.src%>',
+        cwd: 'src',
         src: '**/*.css.less',
-        dest: '<%=pkg.config.build.dest%>',
+        dest: 'dist',
         ext: '.css'
       }
     },
@@ -36,9 +36,9 @@ module.exports = function(grunt) {
       },
       build: {
         expand: true,
-        cwd: '<%=pkg.config.build.src%>',
+        cwd: 'src',
         src: "**/*.js.dust",
-        dest: '<%=pkg.config.build.dest%>',
+        dest: 'dist',
         ext: '.js',
       }
     },
@@ -52,9 +52,9 @@ module.exports = function(grunt) {
       },
       build: {
         expand: true,
-        cwd: '<%=pkg.config.build.dest%>',
+        cwd: 'dist',
         src: "**/*.js",
-        dest: '<%=pkg.config.build.dest%>'
+        dest: 'dist'
       }
     }
   });

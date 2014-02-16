@@ -4,15 +4,6 @@
   "description": "",
   "author": "",
   "license": "MIT",
-  "config": {
-    "build": {
-      "src": "src",
-      "dest": "dist"
-    },
-    "require": {
-      "config": ""
-    }
-  },
   "devDependencies": {
     "grunt": "*",
     "load-grunt-tasks": "*",

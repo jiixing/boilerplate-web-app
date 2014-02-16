@@ -1,0 +1,25 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "config": {
+    "build": {
+      "src": "src",
+      "dest": "dist"
+    },
+    "require": {
+      "config": ""
+    }
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "load-grunt-tasks": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-dust": "*",
+    "grunt-contrib-uglify": "*"
+  }
+}

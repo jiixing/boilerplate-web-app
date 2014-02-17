@@ -1,0 +1,1157 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>gruntjs/grunt-contrib-htmlmin</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="gruntjs/grunt-contrib-htmlmin" name="twitter:title" /><meta content="grunt-contrib-htmlmin - Minify HTML." name="twitter:description" /><meta content="https://0.gravatar.com/avatar/801a04ad77406f5ba958a607f2b27880?d=https%3A%2F%2Fidenticons.github.com%2F4e4819fe606f4444e784c9db7413ec4e.png&amp;r=x&amp;s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://0.gravatar.com/avatar/801a04ad77406f5ba958a607f2b27880?d=https%3A%2F%2Fidenticons.github.com%2F4e4819fe606f4444e784c9db7413ec4e.png&amp;r=x&amp;s=400" property="og:image" /><meta content="gruntjs/grunt-contrib-htmlmin" property="og:title" /><meta content="https://github.com/gruntjs/grunt-contrib-htmlmin" property="og:url" /><meta content="grunt-contrib-htmlmin - Minify HTML." property="og:description" />
+
+    <meta name="hostname" content="github-fe133-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 2.1.0p0-github-tcmalloc (87c9373a41) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="3289F552:4D96:38A729:5302A0EE" name="octolytics-dimension-request_id" /><meta content="330058" name="octolytics-actor-id" /><meta content="coryroloff" name="octolytics-actor-login" /><meta content="bac10726365ea412de660f441c97e8a1546d933c3a000d7f348e1eddc7b793d3" name="octolytics-actor-hash" />
+
+
+
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="veFGXY/5iXTuPdAa/tIsc2Ri15ZOc+I7xzSUhMtPNr4=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-31a53cb584a6382183ac7beb0fdf554c7d3c40bb.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-2ae3f4e67c9611aa6523df2bae070c14626217b6.css" media="all" rel="stylesheet" type="text/css" />
+
+
+
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-693e11922dcacc3a7408a911fe1647da4febd3bd.js" type="text/javascript"></script>
+      <script async="async" src="https://github.global.ssl.fastly.net/assets/github-aef69b55ce3180f9687c3a584683e8be7c73655f.js" type="text/javascript"></script>
+
+      <meta http-equiv="x-pjax-version" content="51f3e1028dcf77842411676a38613c04">
+
+
+  <meta name="description" content="grunt-contrib-htmlmin - Minify HTML." />
+
+  <meta content="1630826" name="octolytics-dimension-user_id" /><meta content="gruntjs" name="octolytics-dimension-user_login" /><meta content="6441869" name="octolytics-dimension-repository_id" /><meta content="gruntjs/grunt-contrib-htmlmin" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="6441869" name="octolytics-dimension-repository_network_root_id" /><meta content="gruntjs/grunt-contrib-htmlmin" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/gruntjs/grunt-contrib-htmlmin/commits/master.atom" rel="alternate" title="Recent Commits to grunt-contrib-htmlmin:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_in  env-production linux vis-public tipsy-tooltips">
+    <div class="wrapper">
+
+
+
+
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+    <a href="/notifications" aria-label="You have no unread notifications" class="notification-indicator tooltipped downwards" data-gotokey="n">
+        <span class="mail-status all-read"></span>
+</a>
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+
+    data-username="coryroloff"
+      data-repo="gruntjs/grunt-contrib-htmlmin"
+      data-branch="master"
+      data-sha="0bb1e638e7a9dc5f12f42676b71516ea7438057e"
+  >
+
+    <input type="hidden" name="nwo" value="gruntjs/grunt-contrib-htmlmin" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+            <li><a href="https://gist.github.com">Gist</a></li>
+            <li><a href="/blog">Blog</a></li>
+          <li><a href="https://help.github.com">Help</a></li>
+        </ul>
+      </div>
+
+
+
+
+  <ul id="user-links">
+    <li>
+      <a href="/coryroloff" class="name">
+        <img alt="Cory Roloff" class=" js-avatar" data-user="330058" height="20" src="https://2.gravatar.com/avatar/eaabd2ab772318704551a944c501f2bf?d=https%3A%2F%2Fidenticons.github.com%2F436f0e673e965726a47832b765e2697b.png&amp;r=x&amp;s=140" width="20" /> coryroloff
+      </a>
+    </li>
+
+    <li class="new-menu dropdown-toggle js-menu-container">
+      <a href="#" class="js-menu-target tooltipped downwards" aria-label="Create new...">
+        <span class="octicon octicon-plus"></span>
+        <span class="dropdown-arrow"></span>
+      </a>
+
+      <div class="js-menu-content">
+      </div>
+    </li>
+
+    <li>
+      <a href="/settings/profile" id="account_settings"
+        class="tooltipped downwards"
+        aria-label="Account settings ">
+        <span class="octicon octicon-tools"></span>
+      </a>
+    </li>
+    <li>
+      <a class="tooltipped downwards" href="/logout" data-method="post" id="logout" aria-label="Sign out">
+        <span class="octicon octicon-log-out"></span>
+      </a>
+    </li>
+
+  </ul>
+
+<div class="js-new-dropdown-contents hidden">
+
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
+  </li>
+  <li>
+    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+    <li class="section-title">
+      <span title="gruntjs/grunt-contrib-htmlmin">This repository</span>
+    </li>
+      <li>
+        <a href="/gruntjs/grunt-contrib-htmlmin/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+</ul>
+
+</div>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+
+
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="veFGXY/5iXTuPdAa/tIsc2Ri15ZOc+I7xzSUhMtPNr4=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="6441869" />
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="/gruntjs/grunt-contrib-htmlmin/watchers">
+        8
+      </a>
+      <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye-watch"></span>
+          Watch
+        </span>
+      </span>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notification status</span>
+            <span class="octicon octicon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                <h4>Not watching</h4>
+                <span class="description">You only receive notifications for conversations in which you participate or are @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-watch"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                <h4>Watching</h4>
+                <span class="description">You receive notifications for all conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-unwatch"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore" />
+                <h4>Ignoring</h4>
+                <span class="description">You do not receive any notifications for conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+
+
+  <div class="js-toggler-container js-social-container starring-container ">
+    <a href="/gruntjs/grunt-contrib-htmlmin/unstar"
+      class="minibutton with-count js-toggler-target star-button starred upwards"
+      title="Unstar this repository" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
+    </a>
+
+    <a href="/gruntjs/grunt-contrib-htmlmin/star"
+      class="minibutton with-count js-toggler-target star-button unstarred upwards"
+      title="Star this repository" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star"></span><span class="text">Star</span>
+    </a>
+
+      <a class="social-count js-social-count" href="/gruntjs/grunt-contrib-htmlmin/stargazers">
+        132
+      </a>
+  </div>
+
+  </li>
+
+
+        <li>
+          <a href="/gruntjs/grunt-contrib-htmlmin/fork" class="minibutton with-count js-toggler-target fork-button lighter upwards" title="Fork this repo" rel="facebox nofollow">
+            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
+          </a>
+          <a href="/gruntjs/grunt-contrib-htmlmin/network" class="social-count">23</a>
+        </li>
+
+
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/gruntjs" class="url fn" itemprop="url" rel="author"><span itemprop="title">gruntjs</span></a>
+          </span>
+          <span class="repohead-name-divider">/</span>
+          <strong><a href="/gruntjs/grunt-contrib-htmlmin" class="js-current-repository js-repo-home-link">grunt-contrib-htmlmin</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+
+
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline with-full-navigation ">
+        <div class="repository-sidebar clearfix">
+
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped leftwards" aria-label="Code">
+        <a href="/gruntjs/grunt-contrib-htmlmin" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /gruntjs/grunt-contrib-htmlmin">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" aria-label="Issues">
+          <a href="/gruntjs/grunt-contrib-htmlmin/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /gruntjs/grunt-contrib-htmlmin/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" aria-label="Pull Requests">
+        <a href="/gruntjs/grunt-contrib-htmlmin/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /gruntjs/grunt-contrib-htmlmin/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped leftwards" aria-label="Wiki">
+          <a href="/gruntjs/grunt-contrib-htmlmin/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_wiki /gruntjs/grunt-contrib-htmlmin/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped leftwards" aria-label="Pulse">
+        <a href="/gruntjs/grunt-contrib-htmlmin/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /gruntjs/grunt-contrib-htmlmin/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" aria-label="Graphs">
+        <a href="/gruntjs/grunt-contrib-htmlmin/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /gruntjs/grunt-contrib-htmlmin/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" aria-label="Network">
+        <a href="/gruntjs/grunt-contrib-htmlmin/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /gruntjs/grunt-contrib-htmlmin/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+
+
+
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/gruntjs/grunt-contrib-htmlmin.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/gruntjs/grunt-contrib-htmlmin.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+
+<div class="clone-url "
+  data-protocol-type="ssh"
+  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="git@github.com:gruntjs/grunt-contrib-htmlmin.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:gruntjs/grunt-contrib-htmlmin.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/gruntjs/grunt-contrib-htmlmin" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/gruntjs/grunt-contrib-htmlmin" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" aria-label="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+                <a href="/gruntjs/grunt-contrib-htmlmin/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   title="Download this repository as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+
+
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>Minify HTML.</p>
+    </div>
+
+    <div class="repository-website js-details-show">
+      <p><a href="http://gruntjs.com/" rel="nofollow">http://gruntjs.com/</a></p>
+    </div>
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/gruntjs/grunt-contrib-htmlmin/commits/master">
+            <span class="num">
+              <span class="octicon octicon-history"></span>
+              37
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/gruntjs/grunt-contrib-htmlmin/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/gruntjs/grunt-contrib-htmlmin/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            4
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+
+  <a href="/gruntjs/grunt-contrib-htmlmin/graphs/contributors">
+    <span class="num">
+      <span class="octicon octicon-organization"></span>
+      6
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/gruntjs/grunt-contrib-htmlmin/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f15501;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">100%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+  </div>
+
+</div>
+
+  <div class="tooltipped downwards" aria-label="Show language statistics">
+    <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats"
+     style="background-color:#f15501">
+  <span class="language-color" style="width:100%; background-color:#f15501;" itemprop="keywords">JavaScript</span>
+    </a>
+  </div>
+
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/gruntjs/grunt-contrib-htmlmin/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped downwards" aria-label="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/gruntjs/grunt-contrib-htmlmin/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/gruntjs/grunt-contrib-htmlmin/tree/v0.2.0"
+                 data-name="v0.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.2.0">v0.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/gruntjs/grunt-contrib-htmlmin/tree/v0.1.3"
+                 data-name="v0.1.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.1.3">v0.1.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/gruntjs/grunt-contrib-htmlmin/tree/v0.1.2"
+                 data-name="v0.1.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.1.2">v0.1.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/gruntjs/grunt-contrib-htmlmin/tree/v0.1.1"
+                 data-name="v0.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.1.1">v0.1.1</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/gruntjs/grunt-contrib-htmlmin" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">grunt-contrib-htmlmin</span></a></span></span><span class="separator"> / </span><form action="/gruntjs/grunt-contrib-htmlmin/new/master" aria-label="Fork this project and create a new file" class="js-new-blob-form tooltipped rightwards new-file-link" method="post"><span aria-label="Fork this project and create a new file" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/gruntjs/grunt-contrib-htmlmin/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+<div class="bubble files-bubble">
+
+
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/gruntjs/grunt-contrib-htmlmin/commit/c8ac99efee8f4d5505cf13b777c139b9661d22a8" class="message" data-pjax="true" title="update changelog">update changelog</a>
+
+    </p>
+    <div class="commit-meta">
+      <span class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="c8ac99efee8f4d5505cf13b777c139b9661d22a8" data-copied-hint="copied!" title="Copy SHA"><span class="octicon octicon-clippy"></span></span>
+      <a href="/gruntjs/grunt-contrib-htmlmin/commit/c8ac99efee8f4d5505cf13b777c139b9661d22a8" class="sha-block" data-pjax>latest commit <span class="sha">c8ac99efee</span></a>
+
+      <div class="authorship">
+        <img alt="Sindre Sorhus" class="gravatar" height="20" src="https://2.gravatar.com/avatar/d36a92237c75c5337c17b60d90686bf9?d=https%3A%2F%2Fidenticons.github.com%2F7fd6fb24bd6ad0594a07bfcc0bed6993.png&amp;r=x&amp;s=140" width="20" />
+        <span class="author-name"><a href="/sindresorhus" data-skip-pjax="true" rel="contributor">sindresorhus</a></span>
+        authored <time class="js-relative-date updated" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-09T09:37:08-08:00" title="2014-02-09 09:37:08">February 09, 2014</time>
+
+      </div>
+    </div>
+  </div>
+
+  <table class="files" data-pjax>
+
+
+<tbody class=""
+  data-url="/gruntjs/grunt-contrib-htmlmin/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/tree/master/docs" class="js-directory-link" id="e3e2a9bfd88566b05001b02a3f51d286-816a7b8b87d45bb2f17b52274ded7ada57cb509c" title="docs">docs</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/4657b5f0d1f9524b5878485b61f1d6ef0c37c025" class="message" data-pjax="true" title="Changelog">Changelog</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-04-05T13:22:55-07:00" title="2013-04-05 13:22:55">April 05, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/tree/master/tasks" class="js-directory-link" id="2cb1ad4f3eb0ea704c74a73689ad1654-0127a2538e277b77a71355ec314066d5b1cc16a8" title="tasks">tasks</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/eb1feb96df293234efaabcef6a9f4030bbd38d87" class="message" data-pjax="true" title="Rewrite task
+
+Drop support for concat. It doesn&#39;t make much sense for HTML. If you really need it use grunt-contrib-concat.">Rewrite task</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-09T09:32:08-08:00" title="2014-02-09 09:32:08">February 09, 2014</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/tree/master/test" class="js-directory-link" id="098f6bcd4621d373cade4e832627b4f6-07dba27fb047a89fa3aa2266fa62348518f13aa2" title="test">test</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/eb1feb96df293234efaabcef6a9f4030bbd38d87" class="message" data-pjax="true" title="Rewrite task
+
+Drop support for concat. It doesn&#39;t make much sense for HTML. If you really need it use grunt-contrib-concat.">Rewrite task</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-09T09:32:08-08:00" title="2014-02-09 09:32:08">February 09, 2014</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/.editorconfig" class="js-directory-link" id="1e70daafb475c0ce3fef7d2728279182-5d126348471c348decba17143ce128130c9f4104" title=".editorconfig">.editorconfig</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/3d553ddec210f953055d04c9d239a8ef198fa664" class="message" data-pjax="true" title="Handle multiple src files, warn on nonexistent files and dont write empt...
+
+...y minified files.">Handle multiple src files, warn on nonexistent files and dont write e…</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-01-12T09:11:51-08:00" title="2013-01-12 09:11:51">January 12, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/.gitattributes" class="js-directory-link" id="fc723d30b02a4cca7a534518111c1a66-176a458f94e0ea5272ce67c36bf30b6be9caf623" title=".gitattributes">.gitattributes</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/989ef4dfd939efd168af2b16687d92ff4e9f9fff" class="message" data-pjax="true" title="init">init</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2012-11-01T14:21:36-07:00" title="2012-11-01 14:21:36">November 01, 2012</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-b785247e588ed6ee0acdec5ae843ce8f69ff1005" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/989ef4dfd939efd168af2b16687d92ff4e9f9fff" class="message" data-pjax="true" title="init">init</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2012-11-01T14:21:36-07:00" title="2012-11-01 14:21:36">November 01, 2012</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/.jshintrc" class="js-directory-link" id="4d5aa81bf4f18104bb6ea53a8b5d1f43-f57a8ff4f27cc7c060a21243ecaa73465c0a4e00" title=".jshintrc">.jshintrc</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/99f93f55e1a3f2f01600d4a8b1b1d0c9f64e3fa3" class="message" data-pjax="true" title="remove moot jshint setting">remove moot jshint setting</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-09T05:23:18-08:00" title="2014-02-09 05:23:18">February 09, 2014</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/.travis.yml" class="js-directory-link" id="354f30a63fb0907d4ad57269548329e3-57661910edb9bda6d6032f1c272a3f9e36504e53" title=".travis.yml">.travis.yml</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/9f19b3420ff352339a606fa9f4d13de054324996" class="message" data-pjax="true" title="quote version number for travis">quote version number for travis</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-03-14T23:27:09-07:00" title="2013-03-14 23:27:09">March 14, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/AUTHORS" class="js-directory-link" id="3d350169560e75d0cf9fc8e3574a3639-960869271e0ce9b845673ba62d5945f723316c14" title="AUTHORS">AUTHORS</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/989ef4dfd939efd168af2b16687d92ff4e9f9fff" class="message" data-pjax="true" title="init">init</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2012-11-01T14:21:36-07:00" title="2012-11-01 14:21:36">November 01, 2012</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/CHANGELOG" class="js-directory-link" id="d3bb3391c79904494c60ee2ac2f33070-2044fd7905e2a17016532b31bef904156b5b3d8a" title="CHANGELOG">CHANGELOG</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/c8ac99efee8f4d5505cf13b777c139b9661d22a8" class="message" data-pjax="true" title="update changelog">update changelog</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-09T09:37:08-08:00" title="2014-02-09 09:37:08">February 09, 2014</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/CONTRIBUTING.md" class="js-directory-link" id="6a3371457528722a734f3c51d9238c13-5d08cc3879a0bcb62e516656f4b929150e4ec64c" title="CONTRIBUTING.md">CONTRIBUTING.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/2d0d9ccc1a80a0d70248c2c75597802956238ab0" class="message" data-pjax="true" title="Cleanup gruntfile, generate updated readme and contributing">Cleanup gruntfile, generate updated readme and contributing</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-01-03T08:24:49-08:00" title="2013-01-03 08:24:49">January 03, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/Gruntfile.js" class="js-directory-link" id="35b4a816e0441e6a375cd925af50752c-f5d90bb6ebfe4f364aeb9299385b0b018a5fd2f2" title="Gruntfile.js">Gruntfile.js</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/eb1feb96df293234efaabcef6a9f4030bbd38d87" class="message" data-pjax="true" title="Rewrite task
+
+Drop support for concat. It doesn&#39;t make much sense for HTML. If you really need it use grunt-contrib-concat.">Rewrite task</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-09T09:32:08-08:00" title="2014-02-09 09:32:08">February 09, 2014</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/LICENSE-MIT" class="js-directory-link" id="7f0bdbc0a0545831259b66259ac6b604-7de6e6f5f575a0e741a7a4cc2968f96ce94a5cef" title="LICENSE-MIT">LICENSE-MIT</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/989ef4dfd939efd168af2b16687d92ff4e9f9fff" class="message" data-pjax="true" title="init">init</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2012-11-01T14:21:36-07:00" title="2012-11-01 14:21:36">November 01, 2012</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-5f508c34695b16ad4843ac7dc86ce545ab972fbd" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/c8ac99efee8f4d5505cf13b777c139b9661d22a8" class="message" data-pjax="true" title="update changelog">update changelog</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-09T09:37:08-08:00" title="2014-02-09 09:37:08">February 09, 2014</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/blob/master/package.json" class="js-directory-link" id="b9cfc7f2cdf78a7f4b91a753d10865a2-e2eac5bf32449edd9c4be4af67a4347a94dc876c" title="package.json">package.json</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/gruntjs/grunt-contrib-htmlmin/commit/03f32c2054de565b0d32c6ca642b46c07506a23b" class="message" data-pjax="true" title="0.2.0">0.2.0</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-09T09:33:55-08:00" title="2014-02-09 09:33:55">February 09, 2014</time></span></td>
+    </tr>
+</tbody>
+
+  </table>
+</div>
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name">
+      <span class="octicon octicon-book"></span>
+      README.md
+    </span>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="grunt-contrib-htmlmin-" class="anchor" href="#grunt-contrib-htmlmin-"><span class="octicon octicon-link"></span></a>grunt-contrib-htmlmin <a href="http://travis-ci.org/gruntjs/grunt-contrib-htmlmin"><img src="https://github-camo.global.ssl.fastly.net/af5994898976f8e63f9365fc9bdee03fec1a21bd/68747470733a2f2f7365637572652e7472617669732d63692e6f72672f6772756e746a732f6772756e742d636f6e747269622d68746d6c6d696e2e706e673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://secure.travis-ci.org/gruntjs/grunt-contrib-htmlmin.png?branch=master" style="max-width:100%;"></a>
+</h1>
+
+<blockquote>
+<p>Minify HTML</p>
+</blockquote>
+
+<p>Minifies HTML using <a href="https://github.com/kangax/html-minifier">html-minifier</a>.</p>
+
+<p><strong>Bugs regarding the output should be reported on the <a href="https://github.com/kangax/html-minifier/issues/new">html-minifier issue tracker</a>, not here.</strong></p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>This plugin requires Grunt <code>~0.4.0</code></p>
+
+<p>If you haven't used <a href="http://gruntjs.com/">Grunt</a> before, be sure to check out the <a href="http://gruntjs.com/getting-started">Getting Started</a> guide, as it explains how to create a <a href="http://gruntjs.com/sample-gruntfile">Gruntfile</a> as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:</p>
+
+<pre lang="shell"><code>npm install grunt-contrib-htmlmin --save-dev
+</code></pre>
+
+<p>Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">'grunt-contrib-htmlmin'</span><span class="p">);</span>
+</pre></div>
+
+<h2>
+<a name="htmlmin-task" class="anchor" href="#htmlmin-task"><span class="octicon octicon-link"></span></a>Htmlmin task</h2>
+
+<p><em>Run this task with the <code>grunt htmlmin</code> command.</em></p>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<p>See the <a href="http://perfectionkills.com/experimenting-with-html-minifier/#options">html-minifier docs</a> for more in-depth explanation of the options and caveats.</p>
+
+<h4>
+<a name="removecomments" class="anchor" href="#removecomments"><span class="octicon octicon-link"></span></a>removeComments</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Strip HTML comments.</p>
+
+<h4>
+<a name="removecommentsfromcdata" class="anchor" href="#removecommentsfromcdata"><span class="octicon octicon-link"></span></a>removeCommentsFromCDATA</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Remove HTML comments from inside <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code>.</p>
+
+<h4>
+<a name="removecdatasectionsfromcdata" class="anchor" href="#removecdatasectionsfromcdata"><span class="octicon octicon-link"></span></a>removeCDATASectionsFromCDATA</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Remove CDATA sections from inside <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code>.</p>
+
+<h4>
+<a name="collapsewhitespace" class="anchor" href="#collapsewhitespace"><span class="octicon octicon-link"></span></a>collapseWhitespace</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Collapse white space that contributes to text nodes in a document tree.</p>
+
+<p>It doesn't affect significant white space; e.g. in contents of elements like SCRIPT, STYLE, PRE or TEXTAREA.</p>
+
+<p><code>&lt;div&gt; &lt;p&gt;    foo &lt;/p&gt;    &lt;/div&gt;</code> =&gt; <code>&lt;div&gt;&lt;p&gt;foo&lt;/p&gt;&lt;/div&gt;</code></p>
+
+<h4>
+<a name="collapsebooleanattributes" class="anchor" href="#collapsebooleanattributes"><span class="octicon octicon-link"></span></a>collapseBooleanAttributes</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Collapse boolean attributes.</p>
+
+<p><code>&lt;input disabled="disabled"&gt;</code> =&gt; <code>&lt;input disabled&gt;</code></p>
+
+<h4>
+<a name="removeattributequotes" class="anchor" href="#removeattributequotes"><span class="octicon octicon-link"></span></a>removeAttributeQuotes</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Remove attribute quotes when it's safe to do so.</p>
+
+<p><code>&lt;p id="foo"&gt;</code> =&gt; <code>&lt;p id=foo&gt;</code></p>
+
+<h4>
+<a name="removeredundantattributes" class="anchor" href="#removeredundantattributes"><span class="octicon octicon-link"></span></a>removeRedundantAttributes</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Remove redundant attributes like <code>type="text/javascript"</code>.</p>
+
+<h4>
+<a name="useshortdoctype" class="anchor" href="#useshortdoctype"><span class="octicon octicon-link"></span></a>useShortDoctype</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Replace doctype with the short HTML5 version <code>&lt;!DOCTYPE html&gt;</code>.</p>
+
+<h4>
+<a name="removeemptyattributes" class="anchor" href="#removeemptyattributes"><span class="octicon octicon-link"></span></a>removeEmptyAttributes</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Remove empty (or blank) attributes.</p>
+
+<h4>
+<a name="removeoptionaltags" class="anchor" href="#removeoptionaltags"><span class="octicon octicon-link"></span></a>removeOptionalTags</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Some elements are allowed to have their tags omitted, like <code>&lt;/td&gt;</code>.</p>
+
+<h4>
+<a name="removeemptyelements" class="anchor" href="#removeemptyelements"><span class="octicon octicon-link"></span></a>removeEmptyElements</h4>
+
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code></p>
+
+<p>Remove empty elements.</p>
+
+<p><em>Experimental</em></p>
+
+<h4>
+<a name="example-config" class="anchor" href="#example-config"><span class="octicon octicon-link"></span></a>Example config</h4>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+  <span class="nx">htmlmin</span><span class="o">:</span> <span class="p">{</span>                                     <span class="c1">// Task</span>
+    <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>                                      <span class="c1">// Target</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>                                 <span class="c1">// Target options</span>
+        <span class="nx">removeComments</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">collapseWhitespace</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="p">},</span>
+      <span class="nx">files</span><span class="o">:</span> <span class="p">{</span>                                   <span class="c1">// Dictionary of files</span>
+        <span class="s1">'dist/index.html'</span><span class="o">:</span> <span class="s1">'src/index.html'</span><span class="p">,</span>     <span class="c1">// 'destination': 'source'</span>
+        <span class="s1">'dist/contact.html'</span><span class="o">:</span> <span class="s1">'src/contact.html'</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">dev</span><span class="o">:</span> <span class="p">{</span>                                       <span class="c1">// Another target</span>
+      <span class="nx">files</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s1">'dist/index.html'</span><span class="o">:</span> <span class="s1">'src/index.html'</span><span class="p">,</span>
+        <span class="s1">'dist/contact.html'</span><span class="o">:</span> <span class="s1">'src/contact.html'</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">'default'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'htmlmin'</span><span class="p">]);</span>
+</pre></div>
+
+<h2>
+<a name="release-history" class="anchor" href="#release-history"><span class="octicon octicon-link"></span></a>Release History</h2>
+
+<ul>
+<li>2014-02-09   v0.2.0   Rewrite task. Drop concat support.</li>
+<li>2013-04-06   v0.1.3   Fail target when minify encounters an error.</li>
+<li>2013-04-05   v0.1.2   Update html-minifier which fixes IE conditional comments and prefixed HTML elements <code>&lt;ng-include&gt;</code> <code>&lt;ng:include&gt;</code>.</li>
+<li>2013-02-18   v0.1.1   First official release for Grunt 0.4.0.</li>
+<li>2013-01-30   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.</li>
+<li>2013-01-09   v0.1.1rc5   Updating to work with grunt v0.4.0rc5. Switching to this.filesSrc api.</li>
+<li>2012-11-01   v0.1.0   Initial release.</li>
+</ul><hr><p>Task submitted by <a href="http://github.com/sindresorhus">Sindre Sorhus</a></p>
+
+<p><em>This file was generated on Sat Apr 06 2013 14:28:13.</em></p></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.05445s from github-fe133-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+

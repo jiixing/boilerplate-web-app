@@ -23,7 +23,8 @@ module.exports = function(grunt) {
         cwd: 'src',
         src: '**/*.css.less',
         dest: 'dist',
-        ext: '.css'
+        ext: '.css',
+        filter: 'isFile'
       }
     },
     dust: {
@@ -37,6 +38,7 @@ module.exports = function(grunt) {
         src: "**/*.js.dust",
         dest: 'dist',
         ext: '.js',
+        filter: 'isFile'
       }
     },
     coffee: {
@@ -45,7 +47,8 @@ module.exports = function(grunt) {
         cwd: 'src',
         src: '**/*.js.coffee',
         dest: 'dist',
-        ext: '.js'
+        ext: '.js',
+        filter: 'isFile'
       }
     },
     requirejs: {
@@ -75,7 +78,22 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'dist',
         src: "**/*.js",
-        dest: 'dist'
+        dest: 'dist',
+        filter: 'isFile'
+      }
+    },
+    htmlmin: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true
+      },
+      build: {
+        expand: true,
+        cwd: 'src',
+        src: '**/*.html',
+        dest: 'dist',
+        ext: '.html',
+        filter: 'isFile'
       }
     }
   });
@@ -89,6 +107,7 @@ module.exports = function(grunt) {
     'dust',
     'coffee',
     'requirejs',
-    'uglify'
+    'uglify',
+    'htmlmin'
   ]);
 };

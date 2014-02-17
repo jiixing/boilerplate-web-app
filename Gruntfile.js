@@ -16,8 +16,6 @@ module.exports = function(grunt) {
     },
     less: {
       options: {
-        sourceMap: true,
-        outputSourceFiles: true,
         compress: true
       },
       build: {
@@ -41,14 +39,25 @@ module.exports = function(grunt) {
         ext: '.js',
       }
     },
+    coffee: {
+      build: {
+        expand: true,
+        cwd: 'src',
+        src: '**/*.js.coffee',
+        dest: 'dist',
+        ext: '.js'
+      }
+    },
     requirejs: {
       build: {
         options: {
-          appDir: 'src',
+          appDir: 'dist',
           baseUrl: '.',
           dir: 'dist',
-          mainConfigFile: 'src/scripts/config.js',
+          mainConfigFile: 'dist/scripts/config.js',
           optimize: 'none',
+          keepBuildDir: true,
+          allowSourceOverwrites: true,
           modules: [
             {
               name: 'scripts/app'
@@ -59,8 +68,6 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        sourceMap: true,
-        sourceMapIncludeSources: true,
         compress: {
           drop_console: true
         }
@@ -81,6 +88,7 @@ module.exports = function(grunt) {
     'copy',
     'less',
     'dust',
+    'coffee',
     'requirejs',
     'uglify'
   ]);

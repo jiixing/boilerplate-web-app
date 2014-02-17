@@ -12,6 +12,7 @@
     "grunt-contrib-clean": "*",
     "grunt-dust": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-requirejs": "*"
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-coffee": "*"
   }
 }

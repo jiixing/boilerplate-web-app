@@ -11,6 +11,7 @@
     "grunt-contrib-copy": "*",
     "grunt-contrib-clean": "*",
     "grunt-dust": "*",
-    "grunt-contrib-uglify": "*"
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-requirejs": "~0.4.1"
   }
 }

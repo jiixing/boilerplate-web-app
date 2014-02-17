@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
     clean: {
       build: [
         'dist'
@@ -42,6 +41,22 @@ module.exports = function(grunt) {
         ext: '.js',
       }
     },
+    requirejs: {
+      build: {
+        options: {
+          appDir: 'src',
+          baseUrl: '.',
+          dir: 'dist',
+          mainConfigFile: 'src/scripts/config.js',
+          optimize: 'none',
+          modules: [
+            {
+              name: 'scripts/app'
+            }
+          ]
+        }
+      }
+    },
     uglify: {
       options: {
         sourceMap: true,
@@ -66,6 +81,7 @@ module.exports = function(grunt) {
     'copy',
     'less',
     'dust',
+    'requirejs',
     'uglify'
   ]);
 };

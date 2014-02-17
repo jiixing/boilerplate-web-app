@@ -51,13 +51,12 @@ module.exports = function(grunt) {
     requirejs: {
       build: {
         options: {
-          appDir: 'dist',
+          appDir: 'src',
           baseUrl: '.',
           dir: 'dist',
-          mainConfigFile: 'dist/scripts/config.js',
+          mainConfigFile: 'src/scripts/config.js',
           optimize: 'none',
           keepBuildDir: true,
-          allowSourceOverwrites: true,
           modules: [
             {
               name: 'scripts/app'

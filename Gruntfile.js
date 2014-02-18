@@ -69,6 +69,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    jshint: {
+      options: {
+        jshintrc: true
+      },
+      build: [
+        'src/**/*.js'
+      ]
+    },
     uglify: {
       options: {
         compress: {
@@ -105,6 +113,7 @@ module.exports = function(grunt) {
     'clean',
     'copy',
     'less',
+    'jshint',
     'dust',
     'coffee',
     'requirejs',

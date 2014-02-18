@@ -7,13 +7,14 @@
   "devDependencies": {
     "grunt": "*",
     "load-grunt-tasks": "*",
+    "grunt-dust": "*",
     "grunt-contrib-less": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-clean": "*",
-    "grunt-dust": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-requirejs": "*",
     "grunt-contrib-coffee": "*",
-    "grunt-contrib-htmlmin": "*"
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-jshint": "*"
   }
 }

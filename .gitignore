@@ -1,4 +1,5 @@
 .DS_Store
+lib
 dist
 lib-cov
 lcov.info
@@ -15,3 +16,4 @@ results
 build
 .grunt
 node_modules
+bower_components

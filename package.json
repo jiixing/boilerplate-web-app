@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "grunt-boilerplate-app",
   "version": "0.0.0",
   "description": "",
   "author": "",
@@ -16,6 +16,7 @@
     "grunt-contrib-coffee": "*",
     "grunt-contrib-htmlmin": "*",
     "grunt-contrib-jshint": "*",
-    "grunt-contrib-watch": "*"
+    "grunt-contrib-watch": "*",
+    "grunt-bower-task": "*"
   }
 }

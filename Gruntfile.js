@@ -105,6 +105,13 @@ module.exports = function(grunt) {
         filter: 'isFile'
       }
     },
+    bower: {
+      build: {
+        options: {
+          layout: 'byComponent'
+        }
+      }
+    },
     watch: {
       options: {
         interupt: true,

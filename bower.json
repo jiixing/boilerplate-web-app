@@ -1,0 +1,10 @@
+{
+	"name": "grunt-boilerplate-app",
+	"version": "0.0.0",
+	"dependencies": {
+		"jquery": ""
+	},
+	"devDependencies": {
+
+	}
+}

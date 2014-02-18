@@ -30,7 +30,8 @@ module.exports = function(grunt) {
     dust: {
       options: {
         wrapper: 'amd',
-        relative: true
+        relative: true,
+        runtime:false
       },
       build: {
         expand: true,

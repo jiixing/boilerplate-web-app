@@ -104,6 +104,18 @@ module.exports = function(grunt) {
         ext: '.html',
         filter: 'isFile'
       }
+    },
+    watch: {
+      options: {
+        interupt: true,
+        livereload: true
+      },
+      js: {
+        files: 'src/**',
+        tasks: [
+          'default'
+        ]
+      }
     }
   });
 

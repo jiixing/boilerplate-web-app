@@ -117,7 +117,7 @@ module.exports = function(grunt) {
         interupt: true,
         livereload: true
       },
-      js: {
+      build: {
         files: 'src/**',
         tasks: [
           'default'

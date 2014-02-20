@@ -79,6 +79,12 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
+        mangle: {
+          except: [
+            'require',
+            'define'
+          ]
+        },
         compress: {
           drop_console: true
         }

@@ -11,12 +11,10 @@
     "grunt-contrib-less": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-clean": "*",
-    "grunt-contrib-uglify": "*",
     "grunt-contrib-requirejs": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-htmlmin": "*",
     "grunt-contrib-jshint": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-bower-task": "*"
+    "grunt-contrib-watch": "*"
   }
 }

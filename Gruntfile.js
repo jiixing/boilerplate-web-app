@@ -56,16 +56,8 @@ module.exports = function(grunt) {
       build: {
         options: {
           appDir: 'src',
-          baseUrl: '.',
           dir: 'dist',
-          mainConfigFile: 'src/scripts/config.js',
-          optimize: 'none',
-          keepBuildDir: true,
-          modules: [
-            {
-              name: 'scripts/app'
-            }
-          ]
+          mainConfigFile: 'src/scripts/main.js'
         }
       }
     },
@@ -80,13 +72,13 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: {
+          compress: {
+
+          },
           except: [
             'require',
             'define'
           ]
-        },
-        compress: {
-          drop_console: true
         }
       },
       build: {
@@ -109,13 +101,6 @@ module.exports = function(grunt) {
         dest: 'dist',
         ext: '.html',
         filter: 'isFile'
-      }
-    },
-    bower: {
-      build: {
-        options: {
-          layout: 'byComponent'
-        }
       }
     },
     watch: {
@@ -142,7 +127,6 @@ module.exports = function(grunt) {
     'dust',
     'coffee',
     'requirejs',
-    'uglify',
     'htmlmin'
   ]);
 };

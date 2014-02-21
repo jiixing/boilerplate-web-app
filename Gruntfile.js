@@ -98,11 +98,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          port: 9001,
-          directory: [
-            'src',
-            'dist'
-          ],
+          base: 'dist',
           livereload: true,
           keepalive: true
         }

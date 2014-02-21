@@ -4,7 +4,13 @@ require.config({
     'lodash': './libs/lodash',
     'backbone': './libs/backbone',
     'q': './libs/q',
-    'q/queue': './libs/queue'
+    'q/queue': './libs/queue',
+    'dust': './libs/dust'
+  },
+  shim: {
+    'dust': {
+      exports: 'dust'
+    }
   },
   map: {
     backbone: {

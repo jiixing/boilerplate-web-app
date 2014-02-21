@@ -4,9 +4,11 @@
   "description": "",
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+  },
   "devDependencies": {
     "grunt": "*",
-    "load-grunt-tasks": "*",
     "grunt-dust": "*",
     "grunt-contrib-less": "*",
     "grunt-contrib-copy": "*",
@@ -16,6 +18,10 @@
     "grunt-contrib-htmlmin": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-watch": "*",
-    "grunt-contrib-connect": "*"
+    "grunt-contrib-connect": "*",
+    "load-grunt-tasks": "*",
+    "karma": "*",
+    "karma-safari-launcher": "*",
+    "karma-firefox-launcher": "*"
   }
 }

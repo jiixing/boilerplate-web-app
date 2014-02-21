@@ -16,6 +16,6 @@
     "grunt-contrib-htmlmin": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-watch": "*",
-    "grunt-contrib-connect": "^0.6.0"
+    "grunt-contrib-connect": "*"
   }
 }

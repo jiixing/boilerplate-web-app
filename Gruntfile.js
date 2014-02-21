@@ -16,7 +16,8 @@ module.exports = function(grunt) {
     },
     less: {
       options: {
-        compress: true
+        compress: true,
+        sourceMap: true
       },
       build: {
         expand: true,

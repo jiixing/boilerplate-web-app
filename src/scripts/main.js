@@ -9,7 +9,3 @@ require.config({
 		jquery: './libs/jquery'
 	}
 });
-
-require([], function() {
-
-});

@@ -69,26 +69,6 @@ module.exports = function(grunt) {
         'src/**/*.js'
       ]
     },
-    uglify: {
-      options: {
-        mangle: {
-          compress: {
-
-          },
-          except: [
-            'require',
-            'define'
-          ]
-        }
-      },
-      build: {
-        expand: true,
-        cwd: 'dist',
-        src: "**/*.js",
-        dest: 'dist',
-        filter: 'isFile'
-      }
-    },
     htmlmin: {
       options: {
         removeComments: true,

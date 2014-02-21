@@ -94,6 +94,19 @@ module.exports = function(grunt) {
           'default'
         ]
       }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          directory: [
+            'src',
+            'dist'
+          ],
+          livereload: true,
+          keepalive: true
+        }
+      }
     }
   });
 

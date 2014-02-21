@@ -30,6 +30,11 @@ module.exports = function(grunt) {
     dust: {
       options: {
         wrapper: 'amd',
+        wrapperOptions: {
+          deps: {
+            dust: "dust"
+          }
+        },
         relative: true,
         runtime:false
       },
@@ -42,23 +47,17 @@ module.exports = function(grunt) {
         filter: 'isFile'
       }
     },
-    coffee: {
-      build: {
-        expand: true,
-        cwd: 'src',
-        src: '**/*.js.coffee',
-        dest: 'dist',
-        ext: '.js',
-        filter: 'isFile'
-      }
-    },
     requirejs: {
       build: {
         options: {
           mainConfigFile: 'src/scripts/main.js',
+          dir: 'dist',
           name: 'main',
-          out: 'dist/scripts/main.js',
-          keepBuildDir: true
+          optimize: 'uglify2',
+          keepBuildDir: true,
+          generateSourceMaps: true,
+          preserveLicenseComments: false,
+          optimizeCss: false
         }
       }
     },
@@ -106,7 +105,6 @@ module.exports = function(grunt) {
     'less',
     'jshint',
     'dust',
-    'coffee',
     'requirejs',
     'htmlmin'
   ]);

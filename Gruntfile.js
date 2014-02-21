@@ -57,7 +57,8 @@ module.exports = function(grunt) {
         options: {
           appDir: 'src',
           dir: 'dist',
-          mainConfigFile: 'src/scripts/main.js'
+          mainConfigFile: 'src/scripts/main.js',
+          keepBuildDir: true
         }
       }
     },

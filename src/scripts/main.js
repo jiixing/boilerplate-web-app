@@ -9,3 +9,7 @@ require.config({
     jquery: './libs/jquery'
   }
 });
+
+require(['./app'], function(app) {
+	app();
+});

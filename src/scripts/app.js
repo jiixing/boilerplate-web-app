@@ -1,17 +1,11 @@
 define(function(require) {
-  var $ = require('jquery');
-  var _ = require('lodash');
-  var Backbone = require('backbone');
-  var Q = require('q');
-  var queue = require('q/queue');
+  var jquery = require('jquery');
   var dust = require('dust');
+  var AppView = require('./views/app-view');
 
   return function() {
-    console.log('jquery', $);
-    console.log('lodash', _);
-    console.log('backbone', Backbone);
-    console.log('q', Q);
-    console.log('q/queue', queue);
-    console.log('dust', dust);
+    var appView = new AppView();
+    $('body').html(appView.$el);
+    appView.render();
   };
 });

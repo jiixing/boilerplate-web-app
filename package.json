@@ -23,5 +23,8 @@
     "karma": "*",
     "karma-safari-launcher": "*",
     "karma-firefox-launcher": "*"
+  },
+  "dependencies": {
+    "express": "*"
   }
 }

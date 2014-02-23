@@ -1,3 +1,11 @@
+AddType application/vnd.ms-fontobject eot
+AddType application/x-font-ttf ttf
+AddType application/x-font-opentype otf
+AddType application/x-font-woff woff
+AddType image/svg+xml svg
+
+AddEncoding svgz
+
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html
 AddOutputFilterByType DEFLATE text/css

@@ -16,11 +16,19 @@ require.config({
     'backbone': './libs/backbone',
     'q': './libs/q',
     'q/queue': './libs/queue',
-    'dust': './libs/dust'
+    'dust': './libs/dust',
+    'bootstrap': './libs/bootstrap',
+    'templates': '../templates'
   },
   shim: {
     'dust': {
       exports: 'dust'
+    },
+    'bootstrap' : {
+      exports: 'jQuery',
+      deps: [
+        'jquery'
+      ]
     }
   },
   map: {

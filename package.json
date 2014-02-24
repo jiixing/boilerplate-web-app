@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "grunt": "*",
+    "grunt-cli": "*",
     "grunt-dust": "*",
     "grunt-contrib-less": "*",
     "grunt-contrib-copy": "*",

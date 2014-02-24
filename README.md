@@ -1,2 +1,2 @@
-grunt-boilerplate-app ![](https://david-dm.org/coryroloff/grunt-boilerplate-app.png)
-=====================
+grunt-boilerplate-app [![devDependency Status](https://david-dm.org/coryroloff/grunt-boilerplate-app/dev-status.png?theme=shields.io)](https://david-dm.org/coryroloff/grunt-boilerplate-app#info=devDependencies)
+====================

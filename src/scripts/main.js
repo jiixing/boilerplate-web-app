@@ -8,8 +8,7 @@ require.config({
     'q': './libs/q',
     'q/queue': './libs/queue',
     'dust': './libs/dust',
-    'bootstrap': './libs/bootstrap',
-    'templates': '../templates'
+    'bootstrap': './libs/bootstrap'
   },
   shim: {
     'dust': {

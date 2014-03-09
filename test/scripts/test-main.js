@@ -9,7 +9,7 @@ for(var file in window.__karma__.files) {
 }
 
 require.config({
-  baseUrl: '/base/src/scripts',
+  baseUrl: '/base/dist/scripts',
   paths: {
     'jquery': './libs/jquery',
     'lodash': './libs/lodash',
@@ -17,8 +17,7 @@ require.config({
     'q': './libs/q',
     'q/queue': './libs/queue',
     'dust': './libs/dust',
-    'bootstrap': './libs/bootstrap',
-    'templates': '../templates'
+    'bootstrap': './libs/bootstrap'
   },
   shim: {
     'dust': {

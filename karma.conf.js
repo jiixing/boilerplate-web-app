@@ -7,11 +7,11 @@ module.exports = function(config) {
     ],
     files: [
       'test/scripts/test-main.js',
-      {pattern: 'src/**/*.js', included: false},
+      {pattern: 'dist/**/*.js', included: false},
       {pattern: 'test/**/*.js', included: false}
     ],
     exclude: [
-      'src/scripts/main.js'
+      'dist/scripts/main.js'
     ],
     reporters: ['progress'],
     port: 9876,

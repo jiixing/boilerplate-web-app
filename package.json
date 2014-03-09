@@ -10,7 +10,7 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-cli": "*",
-    "grunt-dust": "*",
+    "grunt-dustjs-linkedin": "*",
     "grunt-contrib-less": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-clean": "*",

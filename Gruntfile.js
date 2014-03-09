@@ -31,13 +31,10 @@ module.exports = function(grunt) {
     dust: {
       options: {
         wrapper: 'amd',
-        wrapperOptions: {
-          deps: {
-            dust: "dust"
-          }
-        },
-        relative: true,
-        runtime:false
+        helper: 'dust',
+        dependencies: {
+          dust: 'dust'
+        }
       },
       build: {
         expand: true,

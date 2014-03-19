@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     dust: {
       options: {
         wrapper: 'amd',
-        helper: 'dust',
+        helper: 'q',
         dependencies: {
           dust: 'dust'
         }

@@ -1,2 +1,2 @@
-grunt-boilerplate-app [![Build Status](https://travis-ci.org/coryroloff/grunt-boilerplate-app.png)](https://travis-ci.org/coryroloff/grunt-boilerplate-app) [![devDependency Status](https://david-dm.org/coryroloff/grunt-boilerplate-app/dev-status.png?theme=shields.io)](https://david-dm.org/coryroloff/grunt-boilerplate-app#info=devDependencies)
+boilerplate-web-app [![Build Status](https://travis-ci.org/coryroloff/boilerplate-web-app.png)](https://travis-ci.org/coryroloff/boilerplate-web-app) [![devDependency Status](https://david-dm.org/coryroloff/boilerplate-web-app/dev-status.png?theme=shields.io)](https://david-dm.org/coryroloff/boilerplate-web-app#info=devDependencies)
 ====================

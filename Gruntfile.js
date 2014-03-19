@@ -33,13 +33,14 @@ module.exports = function(grunt) {
         wrapper: 'amd',
         helper: 'q',
         dependencies: {
-          dust: 'dust'
+          dust: 'dust',
+          Q: 'q'
         }
       },
       build: {
         expand: true,
         cwd: 'src',
-        src: "**/*.js.dust",
+        src: '**/*.js.dust',
         dest: 'dist',
         ext: '.js',
         filter: 'isFile'

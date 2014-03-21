@@ -1,9 +1,10 @@
 {
   "camelcase": true,
   "curly": false,
+  "es3": true,
   "indent": 2,
   "latedef": true,
-  "quotmark": "single",
+  "quotmark": true,
   "strict": false,
   "trailing": true,
   "node": true,

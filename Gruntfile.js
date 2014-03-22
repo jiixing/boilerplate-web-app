@@ -92,13 +92,12 @@ module.exports = function(grunt) {
       }
     },
     karma: {
-      unit: {
-        configFile: 'karma.conf.js'
-      },
-      continuous: {
+      build: {
         configFile: 'karma.conf.js',
         singleRun: true,
-        browsers: ['PhantomJS']
+        browsers: [
+          'PhantomJS'
+        ]
       }
     },
     watch: {
@@ -134,6 +133,6 @@ module.exports = function(grunt) {
     'dust',
     'requirejs',
     'htmlmin',
-    'karma:continuous'
+    'karma'
   ]);
 };

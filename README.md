@@ -1,2 +1,3 @@
-boilerplate-web-app [![Build Status](https://travis-ci.org/coryroloff/boilerplate-web-app.png)](https://travis-ci.org/coryroloff/boilerplate-web-app) [![devDependency Status](https://david-dm.org/coryroloff/boilerplate-web-app/dev-status.png?theme=shields.io)](https://david-dm.org/coryroloff/boilerplate-web-app#info=devDependencies)
+boilerplate-web-app [![Build Status](https://travis-ci.org/coryroloff/boilerplate-web-app.png)](https://travis-ci.org/coryroloff/boilerplate-web-app)
 ====================
+> A template for building new web applications.

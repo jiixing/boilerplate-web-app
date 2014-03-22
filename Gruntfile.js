@@ -91,6 +91,16 @@ module.exports = function(grunt) {
         filter: 'isFile'
       }
     },
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js'
+      },
+      continuous: {
+        configFile: 'karma.conf.js',
+        singleRun: true,
+        browsers: ['PhantomJS']
+      }
+    },
     watch: {
       options: {
         interupt: true,
@@ -123,17 +133,7 @@ module.exports = function(grunt) {
     'jshint',
     'dust',
     'requirejs',
-    'htmlmin'
-  ]);
-
-  grunt.registerTask('ci-test', [
-    'clean',
-    'bower',
-    'copy',
-    'less',
-    'jshint',
-    'dust',
-    'requirejs',
-    'htmlmin'
+    'htmlmin',
+    'karma:continuous'
   ]);
 };

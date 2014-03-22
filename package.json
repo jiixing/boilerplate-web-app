@@ -5,7 +5,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "test": "grunt ci-test"
+    "test": "grunt"
   },
   "devDependencies": {
     "grunt": "*",
@@ -18,8 +18,10 @@
     "grunt-contrib-coffee": "*",
     "grunt-contrib-htmlmin": "*",
     "grunt-contrib-jshint": "*",
+    "grunt-karma": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-connect": "*",
+    "grunt-bower-task": "*",
     "load-grunt-tasks": "*",
     "karma": "*",
     "karma-safari-launcher": "*",
@@ -34,7 +36,7 @@
     "karma-coffee-preprocessor": "*",
     "karma-phantomjs-launcher": "*",
     "karma-mocha": "*",
-    "grunt-bower-task": "^0.3.x"
+    "karma-sinon-chai": "*"
   },
   "dependencies": {
     "express": "*"

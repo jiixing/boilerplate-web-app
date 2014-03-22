@@ -2,8 +2,9 @@ module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: [
+      'requirejs',
       'mocha',
-      'requirejs'
+      'sinon-chai'
     ],
     files: [
       'test/scripts/test-main.js',

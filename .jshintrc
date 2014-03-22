@@ -11,6 +11,10 @@
   "globals": {
     "requirejs": false,
     "require": false,
-    "define": false
+    "define": false,
+    "sinon": false,
+    "should": false,
+    "expect": false,
+    "assert": false
   }
 }

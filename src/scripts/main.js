@@ -1,3 +1,17 @@
+var isKarma = !!window.__karma__;
+
+if(isKarma) {
+  var tests = [];
+
+  for(var file in window.__karma__.files) {
+    if(window.__karma__.files.hasOwnProperty(file)) {
+      if(/-spec\.js$/.test(file)) {
+        tests.push(file);
+      }
+    }
+  }
+}
+
 require.config({
   appDir: '..',
   baseUrl: 'scripts',
@@ -12,7 +26,9 @@ require.config({
   shim: {
     'dust': {
       exports: 'dust',
-      deps: ['./libs/dustjs-linkedin/js/dust-core']
+      deps: [
+        './libs/dustjs-linkedin/js/dust-core'
+      ]
     }
   },
   map: {
@@ -22,6 +38,14 @@ require.config({
   }
 });
 
-require(['./app'], function(app) {
-  app();
-});
+if(!isKarma) {
+  require(['./app'], function(app) {
+    app();
+  });
+}
+else {
+  var config = requirejs.s.contexts._.config;
+  config.deps = tests;
+  config.callback = window.__karma__.start;
+  require.config(config);
+}

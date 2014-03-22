@@ -7,14 +7,13 @@ module.exports = function(config) {
       'sinon-chai'
     ],
     files: [
-      'test/scripts/test-main.js',
+      'dist/scripts/main.js',
       {pattern: 'dist/**/*.js', included: false},
       {pattern: 'test/**/*.js', included: false}
     ],
-    exclude: [
-      'dist/scripts/main.js'
+    reporters: [
+      'progress'
     ],
-    reporters: ['progress'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

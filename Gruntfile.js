@@ -5,6 +5,15 @@ module.exports = function(grunt) {
         'dist'
       ]
     },
+    bower: {
+      install: {
+        options: {
+          targetDir: './src/scripts/libs',
+          cleanup: true,
+          layout: 'byComponent'
+        }
+      }
+    },
     copy: {
       build : {
         expand: true,
@@ -109,6 +118,17 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [
     'clean',
+    'copy',
+    'less',
+    'jshint',
+    'dust',
+    'requirejs',
+    'htmlmin'
+  ]);
+
+  grunt.registerTask('ci-test', [
+    'clean',
+    'bower',
     'copy',
     'less',
     'jshint',

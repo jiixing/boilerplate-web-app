@@ -20,7 +20,6 @@ require.config({
     'lodash': './libs/lodash/lodash.compat',
     'backbone': './libs/backbone/backbone',
     'q': './libs/q/js/q',
-    'q/queue': './util/queue',
     'dust': './libs/dustjs-linkedin-helpers/js/dust-helpers'
   },
   shim: {

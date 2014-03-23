@@ -16,6 +16,8 @@
     "sinon": false,
     "should": false,
     "expect": false,
-    "assert": false
+    "assert": false,
+    "describe": false,
+    "it": false
   }
 }

@@ -3,8 +3,18 @@ define(function(require) {
   var $ = require('jquery');
 
   describe('app', function() {
+    var sandbox;
+
+    beforeEach(function() {
+      sandbox = sinon.sandbox.create();
+    });
+
+    afterEach(function(){
+      sandbox.restore();
+    });
+
     it('should prepend view', function() {
-      sinon.stub($.fn, 'prepend');
+      sandbox.stub($.fn, 'prepend');
       app();
       expect($.fn.prepend).to.be.calledOnce;
     });

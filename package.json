@@ -23,22 +23,19 @@
     "grunt-contrib-connect": "*",
     "grunt-bower-task": "*",
     "load-grunt-tasks": "*",
+    "mocha": "*",
+    "requirejs": "*",
     "karma": "*",
     "karma-safari-launcher": "*",
     "karma-firefox-launcher": "*",
-    "mocha": "*",
     "karma-script-launcher": "*",
     "karma-chrome-launcher": "*",
     "karma-html2js-preprocessor": "*",
     "karma-jasmine": "*",
-    "requirejs": "*",
     "karma-requirejs": "*",
     "karma-coffee-preprocessor": "*",
     "karma-phantomjs-launcher": "*",
     "karma-mocha": "*",
     "karma-sinon-chai": "*"
-  },
-  "dependencies": {
-    "express": "*"
   }
 }

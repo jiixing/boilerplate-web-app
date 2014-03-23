@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       ]
     },
     bower: {
-      install: {
+      build: {
         options: {
           targetDir: './src/scripts/libs',
           cleanup: true,
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
       }
     },
     connect: {
-      server: {
+      build: {
         options: {
           base: 'dist',
           livereload: true,

@@ -10,5 +10,5 @@ You must have [Node](http://nodejs.org) and [Grunt](http://gruntjs.com) installe
 * Install dev dependencies: `npm install`
 * Install front-end dependencies: `grunt bower`
 * Compile: `grunt`
-* Run tests: `npm test`
+* Run tests: `karma start`
 * Start local server: `grunt connect`

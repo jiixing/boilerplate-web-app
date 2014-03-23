@@ -44,6 +44,7 @@ if(!isKarma) {
 }
 else {
   var config = requirejs.s.contexts._.config;
+  config.baseUrl = '/base/dist/scripts';
   config.deps = tests;
   config.callback = window.__karma__.start;
   require.config(config);

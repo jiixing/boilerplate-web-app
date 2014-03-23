@@ -74,7 +74,8 @@ module.exports = function(grunt) {
         jshintrc: true
       },
       build: [
-        'src/**/*.js'
+        'src/**/*.js',
+        'test/**/*.js'
       ]
     },
     htmlmin: {

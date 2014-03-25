@@ -2,7 +2,10 @@
   "name": "boilerplate-web-app",
   "version": "0.0.0",
   "description": "",
-  "author": "",
+  "author": {
+    "name": "",
+    "url": ""
+  },
   "license": {
     "name": "MIT",
     "url": ""

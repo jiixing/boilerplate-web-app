@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "",
   "author": "",
-  "license": "MIT",
+  "license": {
+    "name": "MIT",
+    "url": ""
+  },
   "repository": {
     "type": "git",
     "url": ""

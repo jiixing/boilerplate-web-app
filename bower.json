@@ -11,20 +11,21 @@
     "q": "^1.x",
     "requirejs": "^2.x",
     "requirejs-text": "^2.x",
-    "grunt-dustjs-linkedin": "^0.x"
+    "grunt-dustjs-linkedin": "^0.x",
+    "moment": "^2.x"
   },
   "exportsOverride": {
     "dustjs-linkedin": {
-       "js": [
-         "dist/dust-core.js",
-         "dist/dust-full.js"
-       ]
+      "js": [
+        "dist/dust-core.js",
+        "dist/dust-full.js"
+      ]
     },
     "dustjs-linkedin-helpers": {
       "js": "dist/dust-helpers.js"
     },
     "q": {
-       "js": "q.js"
+      "js": "q.js"
     },
     "underscore": {},
     "requirejs-text": {

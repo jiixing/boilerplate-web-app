@@ -29,7 +29,8 @@ require.config({
     'backbone': './libs/backbone/backbone',
     'q': './libs/q/js/q',
     'dust': './libs/dustjs-linkedin-helpers/js/dust-helpers',
-    'dust-full': './libs/dustjs-linkedin-helpers/js/dust-helpers'
+    'dust-full': './libs/dustjs-linkedin-helpers/js/dust-helpers',
+    'moment': './libs/moment/moment'
   },
   shim: {
     'dust': {

@@ -28,6 +28,7 @@ require.config({
     'lodash': './libs/lodash/lodash.compat',
     'backbone': './libs/backbone/backbone',
     'q': './libs/q/js/q',
+    'bluebird': './libs/bluebird/bluebird',
     'dust': './libs/dustjs-linkedin-helpers/js/dust-helpers',
     'dust-full': './libs/dustjs-linkedin-helpers/js/dust-helpers',
     'moment': './libs/moment/moment'

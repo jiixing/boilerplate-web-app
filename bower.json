@@ -9,6 +9,7 @@
     "jquery": "^2.x",
     "lodash": "^2.x",
     "q": "^1.x",
+    "bluebird": "^1.x",
     "requirejs": "^2.x",
     "requirejs-text": "^2.x",
     "grunt-dustjs-linkedin": "^0.x",

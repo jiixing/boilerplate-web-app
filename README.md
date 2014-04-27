@@ -31,6 +31,7 @@ You must have [Node](http://nodejs.org) and [Grunt](http://gruntjs.com) installe
 - Dust
 - jQuery
 - Q
+- Bluebird
 - Moment
 - Sinon
 - Chai

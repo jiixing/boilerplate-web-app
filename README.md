@@ -30,7 +30,6 @@ You must have [Node](http://nodejs.org) and [Grunt](http://gruntjs.com) installe
 - Bootstrap
 - Dust
 - jQuery
-- Q
 - Bluebird
 - Moment
 - Sinon

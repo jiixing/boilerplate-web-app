@@ -16,18 +16,19 @@ require.config({
   appDir: '..',
   baseUrl: 'scripts',
   config: {
-    dustc: {
+    gdl: {
       ext: '.js.dust',
-      helper: 'q'
+      helper: 'bluebird'
     }
   },
   paths: {
     'text': './libs/requirejs-text/js/text',
-    'dustc': './libs/grunt-dustjs-linkedin/dustc',
+    'gdl': './libs/grunt-dustjs-linkedin/dust',
+    'dust-helper': './libs/grunt-dustjs-linkedin/dust-helper',
+    'bluebird-helper': './libs/grunt-dustjs-linkedin/bluebird-helper',
     'jquery': './libs/jquery/jquery',
     'lodash': './libs/lodash/lodash.compat',
     'backbone': './libs/backbone/backbone',
-    'q': './libs/q/js/q',
     'bluebird': './libs/bluebird/bluebird',
     'dust': './libs/dustjs-linkedin-helpers/js/dust-helpers',
     'dust-full': './libs/dustjs-linkedin-helpers/js/dust-helpers',
@@ -53,7 +54,9 @@ require.config({
     }
   },
   stubModules: [
-    'dustc',
+    'gdl',
+    'dust-helper',
+    'bluebird-helper',
     'text'
   ]
 });

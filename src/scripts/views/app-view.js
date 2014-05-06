@@ -1,6 +1,6 @@
 define(function(require) {
   var Backbone = require('backbone');
-  var AppTemplate = require('dustc!../templates/app');
+  var AppTemplate = require('gdl!../templates/app');
 
   var AppView = Backbone.View.extend({
     render: function() {

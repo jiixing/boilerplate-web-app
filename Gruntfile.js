@@ -40,10 +40,10 @@ module.exports = function(grunt) {
     dust: {
       options: {
         wrapper: 'amd',
-        helper: 'q',
+        helper: 'bluebird',
         dependencies: {
           dust: 'dust',
-          Q: 'q'
+          Promise: 'bluebird'
         }
       },
       build: {
